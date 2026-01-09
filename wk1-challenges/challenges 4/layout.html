@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Challenges</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header>
+        <h1> HTML and CSS Refresher Challenges</h1>
+        
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#">html basics</a></li>
+                <li><a href="#">CSS basics</a></li>
+                <li><a href="#">Page Layout</a></li>
+                <li><a href="#">Responsive Design</a></li>
+                
+            </ul>
+        </nav>
+        <article>
+            <h2>Structure,Prasing and Display</h2>
+            <p> 
+                Structural elements are block elements that define block level elements like p, header, h1, h2, h3, footer tags. Inline elements only applies to specific words or phrases. 
+            </p>
+            <p>
+                The different display settings include flexbox and grid.
+            </p>
+        </article>
+
+        <article>
+            <h2>Box Model</h2>
+                <p>Box model treats each html element as a rectangular box that has 4 layers, content, padding, margin, and border. Paddings are space between the the text and box-border. Margin is space outside of border. Sometimes padding and margin can add additional peripheral space and create issues with gutters. To prevent this box-sizing property can be used to keep added paddings within pre-determined box size</p>
+                <div class=""box-model-image>
+                    <img src="images/box-model.png" alt="box-model" width="600" height="auto">
+               </div>
+        </article>  
+        <article>
+            <h2>Background Images</h2>
+            <div class='photo'>
+                <p>If the semantic tag of the image is important it's better to place it in html file for accessibility reason. If the image is purely decorative, such as background images, then placing it in CSS might allow better control of the image. </p>
+            </div>
+            <p>the image is 200x280 px and 38k, the image is a gate in a museum</p>
+            
+        </article>
+    </main>
+    <footer>
+        <p> Page by Grace Chen<br>
+        HTML checked by Henry Xu</p>
+    </footer>
+
+    
+</body>
+</html>
