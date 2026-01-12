@@ -1,13 +1,173 @@
-#container { 
-    width: 1200px;
-    margin:auto;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, main, footer{
+    max-width: 1020px;
+    margin: auto;
+    font-family: IBM Plex Sans;
+    color: #2B29EA;
+    line-height: 1.5em;
+}
+
+.button {
+    background-color: #2B29EA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 0 30px;
+    transition: 
+        transform .5s ease;
+        background-color .5s ease;
+    }
+
+.button a {
+    display: block;
+    width: 100%;
+    padding: 10px 30px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    }    
+
+main {
+    width: calc(100% - 50px);
+    margin: auto;
+}
+h1, h2, h3 {
+    color: #2B29EA;
+    font-family: IBM Plex Sans;
+}
+
+h1 {
+    font-weight: 400;
+    line-height: 1em;
+}
+
+h2{
+    line-height: 1.5em;
+    font-weight: 400;
+    padding-bottom: 1em;
+}
+
+h3{
+    line-height: 1.6em;
+    font-size: 1.2em;
+}
+
+a {
+     text-decoration: none;
+     color: #2B29EA;
+}
+ul {
+    list-style: none;
+}
+
+#logo #square{
+    width: 50px;
+    height: 50px;
+    background-color: #2B29EA;
+}
+
+#logo {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+#square a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#logo h1 {
+    line-height: 0;
+    padding-left: 10px;
+    font-weight: 400;
+}
 
 #banner {
-    width: 1100px;
-    height: 250px;
-    background-color: purple;
+    max-width: 100%;
+    height: 200px;
+    background-color: #B7BEEF;
 }
 
-li{
-    list-style-type: none;
+
+
+.card {
+    box-sizing: border-box;
+    margin-bottom: 2em;
 }
+
+footer {
+    padding: 10px 20px;
+    width: 100%;
+    color: white;
+    background-color: #4845fd;
+    height: 60px;
+    font-size: .6em;
+    margin-left: auto;
+}
+
+footer a {
+    color: white;
+    font-weight: 600;
+   
+}
+
+@media screen and (min-width: 600px) {
+    main div {
+        display: flex;
+        flex-wrap: wrap ;
+        justify-content: flex-start;
+        gap: 3em;
+    }
+    .card {margin-bottom: 0;}
+
+    main {
+        margin-bottom: 2em;
+    } 
+
+    nav ul {
+        display: flex;
+        margin-bottom: 1em;
+        justify-content: flex-start;
+        background-color: #2B29EA;
+        max-width: 100%;
+    }
+
+    .button {
+        background-color: #2B29EA;
+        display: flex;
+        width: 180px;
+        height: 50px;
+        padding: 0 30px;
+        transition: 
+            transform .5s ease;
+            background-color .5s ease;
+    }
+
+    .button a {
+        display: block;
+        width: 100%;
+        padding: 10px 30px;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+    }
+    .button:hover {
+        transform: scaleY(1.5) translateY(-10px);
+        background-color: #2B29EA;
+    }
+
+    nav a {
+        color: white;
+    }
+}
+    
+
