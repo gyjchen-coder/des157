@@ -17,22 +17,21 @@ header, main, footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: auto;
     padding: 0 30px;
-    transition: 
-        transform .5s ease;
-        background-color .5s ease;
+   
     }
-
 .button a {
     display: block;
-    width: 100%;
-    padding: 10px 30px;
-    font-weight: 600;
-    color: white;
-    text-transform: uppercase;
     padding: 12px 30px;
-    }    
+    text-align: center;
+    color: white;
+}
+
+nav ul {
+    text-align: center;
+}
 
 main {
     width: calc(100% - 50px);
@@ -148,7 +147,7 @@ footer a {
         height: 50px;
         padding: 0 30px;
         transition: 
-            transform .5s ease;
+            transform .5s ease,
             background-color .5s ease;
     }
 
@@ -162,7 +161,7 @@ footer a {
     }
     .button:hover {
         transform: scaleY(1.5) translateY(-10px);
-        background-color: #2B29EA;
+        background-color: #605efc;
     }
 
     nav a {
