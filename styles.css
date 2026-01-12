@@ -12,27 +12,6 @@ header, main, footer{
     line-height: 1.5em;
 }
 
-.button {
-    background-color: #2B29EA;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    padding: 0 30px;
-   
-    }
-.button a {
-    display: block;
-    padding: 12px 30px;
-    text-align: center;
-    color: white;
-}
-
-nav ul {
-    text-align: center;
-}
-
 main {
     width: calc(100% - 50px);
     margin: auto;
@@ -96,6 +75,38 @@ ul {
     background-color: #B7BEEF;
 }
 
+nav ul {
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.button {
+    font-size: 1em;
+    font-weight: 600;
+    width: 100%;
+    flex: 1;
+    background-color:#2B29EA;
+    height: 60px;
+    list-style-type: none;
+    text-align: center;
+    color: white;
+}
+
+.button a {
+     text-decoration: none;
+     color: white;    
+}
+
+.button:hover {
+    background-color: #605efc;
+}
+   
+
+a:visited {
+  color: white;
+}
 
 
 .card {
@@ -122,24 +133,23 @@ footer a {
 @media screen and (min-width: 600px) {
     main div {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap ;
         justify-content: flex-start;
         gap: 3em;
     }
-    .card {margin-bottom: 0;}
+    .card {
+        margin-bottom: 0;
+    }
 
     main {
         margin-bottom: 2em;
     } 
-
-    nav ul {
-        display: flex;
-        margin-bottom: 1em;
+    nav ul{
+        flex-direction: row;
         justify-content: flex-start;
-        background-color: #2B29EA;
-        max-width: 100%;
     }
-
+        
     .button {
         background-color: #2B29EA;
         display: flex;
@@ -151,7 +161,7 @@ footer a {
             background-color .5s ease;
     }
 
-    .button a {
+   header a {
         display: block;
         width: 100%;
         padding: 10px 30px;
@@ -160,8 +170,8 @@ footer a {
         text-transform: uppercase;
     }
     .button:hover {
-        transform: scaleY(1.5) translateY(-10px);
-        background-color: #605efc;
+        transform: scaleY(1.5), translateY(-10);
+        background-color: #4845fd;
     }
 
     nav a {
