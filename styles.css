@@ -39,8 +39,12 @@ h3{
 
 a {
      text-decoration: none;
-     color: #2B29EA;
 }
+
+main a:visited {
+    color: #2B29EA;
+}
+
 ul {
     list-style: none;
 }
@@ -76,38 +80,37 @@ ul {
 }
 
 nav ul {
-    margin:0;
-    padding:0;
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: stretch; 
+    margin-bottom: 2em; 
 }
 .button {
-    font-size: 1em;
-    font-weight: 600;
-    width: 100%;
-    flex: 1;
-    background-color:#2B29EA;
-    height: 60px;
-    list-style-type: none;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: #2B29EA;
     color: white;
-}
-
-.button a {
-     text-decoration: none;
-     color: white;    
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 1s ease;
+    border: 1px solid #1411bf;
 }
 
 .button:hover {
     background-color: #605efc;
 }
-   
-
-a:visited {
-  color: white;
-}
-
+header a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    border: 2px;
+    border-color: #1411bf;
+    }  
 
 .card {
     box-sizing: border-box;
@@ -118,9 +121,9 @@ footer {
     padding: 10px 20px;
     width: 100%;
     color: white;
-    background-color: #4845fd;
+    background-color: #2B29EA;
     height: 60px;
-    font-size: .6em;
+    font-size: .8em;
     margin-left: auto;
 }
 
@@ -147,31 +150,20 @@ footer a {
     } 
     nav ul{
         flex-direction: row;
-        justify-content: flex-start;
+        background-color: #2B29EA;
     }
         
     .button {
-        background-color: #2B29EA;
-        display: flex;
         width: 180px;
-        height: 50px;
-        padding: 0 30px;
         transition: 
             transform .5s ease,
             background-color .5s ease;
+        border: 0;
     }
 
-   header a {
-        display: block;
-        width: 100%;
-        padding: 10px 30px;
-        font-weight: 600;
-        color: white;
-        text-transform: uppercase;
-    }
     .button:hover {
-        transform: scaleY(1.5), translateY(-10);
-        background-color: #4845fd;
+        transform: scaleY(1.5) translateY(-9px);
+        background-color: #5451fc;
     }
 
     nav a {
