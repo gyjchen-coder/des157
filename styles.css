@@ -73,10 +73,44 @@ ul {
     font-weight: 400;
 }
 
-#banner {
+#banner  {
+    position: relative;
     max-width: 100%;
     height: 200px;
     background-color: #B7BEEF;
+    overflow: hidden
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    background: #5d6cf0;
+    background: radial-gradient(circle, rgba(93, 108, 240, 1) 0%, rgba(183, 190, 239, 0) 100%);
+    transition: 
+        transform .5s ease,
+        background-color .5s ease;
+        position: absolute
+}
+
+.square:hover {
+    background-color: #8491f2;
+    transform: scale(1.5);
+}
+
+#anim1 {
+    width:30%;
+    top: 0px;
+    left: 0px;
+}
+
+#anim2 {
+    top: 0px;
+    left: 250px;
+}
+
+#anim3 {
+    bottom: 0px;
+    right: 50px;
 }
 
 nav ul {
@@ -147,13 +181,14 @@ footer a {
 
     main {
         margin-bottom: 2em;
-        padding-left: 2em;
+        padding: 0 2em;
     } 
+
     nav ul{
         flex-direction: row;
         background-color: #2B29EA;
     }
-        
+
     .button {
         width: 180px;
         transition: 
