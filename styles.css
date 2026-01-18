@@ -154,7 +154,10 @@ header a {
 }
 
 .card li a:hover {
-    background-color: #1411bf;
+    background-color: #DBFB9A;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  
 }
 
 footer {
