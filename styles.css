@@ -119,6 +119,7 @@ nav ul {
     align-items: stretch; 
     margin-bottom: 2em; 
 }
+
 .button {
     display: flex;
     align-items: center;
@@ -135,6 +136,7 @@ nav ul {
 .button:hover {
     background-color: #605efc;
 }
+
 header a {
     display: block;
     width: 100%;
@@ -149,6 +151,10 @@ header a {
 .card {
     box-sizing: border-box;
     margin-bottom: 2em;
+}
+
+.card li a:hover {
+    background-color: #1411bf;
 }
 
 footer {
