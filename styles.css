@@ -266,6 +266,7 @@ footer a {
 
 
 @media screen and (min-width: 600px) {
+
     main {
         margin: auto;
         padding: 0 2em;
@@ -306,6 +307,7 @@ footer a {
     nav a {
         color: white;
     }
+
     article {
         display: flex;
         flex-direction: row;
@@ -331,8 +333,9 @@ footer a {
 
     .sketch img {
     display: block;
-    width: 30%;
-    height: auto;
+    height: 40vh;
+    width: auto;
+
 }
 
 }
