@@ -13,9 +13,10 @@
     
 </head>
 <body>
-    <h1>Guess what CMYK color I'm thinking of?</h1>
-    <h2>Open the console to see play this game.</h2>
-
+    <div id="changeColor">
+        <h1>Guess what CMYK color I'm thinking of?</h1>
+        <h2>I'm thinking of ____ </h2>
+    </div>
     <script>
         var colors = ['cyan','magenta','yellow','black'];
 
@@ -33,15 +34,17 @@
         if (userInput === null){
             console.log("Game canceled.");
         } else {
-            var userColor = userInput.toLowerCase();
-            if (userColor === winningColor){
-            console.log(`you've guessed it! ${winningColor} is the color!`);
-            } else {
-                console.log("That is not the color.");
-                console.log(`I was thinking of ${winningColor}.`);          
-            }   
+                var userColor = userInput.toLowerCase();
+                if (userColor === winningColor){
+                var myText = document.querySelector ('#changeColor h2');
+                myText.innerHTML = `I'm thinking of ${winningColor}`;
+                myText.style.color = winningColor;
+                alert("You've got it!");
+            }else {
+                alert('Nope--Try again!');
+            }
         }
-        
+      
    
     </script>
     
