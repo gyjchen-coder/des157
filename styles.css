@@ -160,11 +160,6 @@ main h2 {
     line-height: 1em;
 }
 
-
-article p {
-    margin-bottom: 1em;
-}
-
 a { 
     font-size: 1em;
     text-decoration: none;
@@ -183,12 +178,27 @@ footer a:hover {
     background-color: transparent;
 }
 
+article p {
+    margin-bottom: 1em;
+}
+
 article a {
     font-weight: 600;
     font-size: .8em;  
 }
 .article-content {
     margin-bottom: 1em;
+}
+
+.article-content ol {
+    padding-left: 3em;
+    margin: .6em 0;
+}
+
+.article-content ol li .sublist-num {
+    padding-left: 3em;
+    margin: .6em 0;
+    list-style-type: square;
 }
 
 ul {
@@ -317,6 +327,7 @@ footer a {
 
     .article-content {
         flex: 2;
+        max-width: 50%;
     }
 
     article img {
