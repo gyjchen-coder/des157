@@ -35,14 +35,14 @@
             console.log("Game canceled.");
         } else {
                 var userColor = userInput.toLowerCase();
-                if (userColor === winningColor){
                 var myText = document.querySelector ('#changeColor h2');
-                myText.innerHTML = `I'm thinking of ${winningColor}`;
-                myText.style.color = winningColor;
-                alert("You've got it!");
-            } else {
-                myText.innerHTML = `Nope, I'm thinking of ${winningColor}, try again!`;
-            }
+                if (userColor === winningColor){
+                    myText.innerHTML = `yes, I'm thinking of ${winningColor}`;
+                    myText.style.backgroundColor = winningColor;  
+                } else {
+                     myText.innerHTML = `Nope, I'm thinking of ${winningColor}, try again!`;
+                     myText.style.color = winningColor; 
+                }   
         }
       
    
