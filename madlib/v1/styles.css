@@ -16,6 +16,60 @@ section {
     margin: auto;
 }
 
+#cat-clou {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#cloud1 {
+    position: absolute;
+    max-width: 140px;
+    height: auto;
+    bottom: 20%;
+    left: 18%;
+    z-index: 1;
+    
+    animation: float-up-down1 2s ease-in-out infinite;
+}
+#cloud2 {
+    position: absolute;
+    max-width: 110px;
+    height: auto;
+    bottom: 2%;
+    left: 36%;
+    z-index: 3;
+    
+    animation: float-up-down2  2s ease-in-out infinite;
+
+}
+
+@keyframes float-up-down1 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-up-down2 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 #meditating-cat{
     display: block;
     max-width:180px;
@@ -36,6 +90,8 @@ section {
         transform: translateY(0);
     }
 }
+
+
 
 #intro {
     padding-right: 5em;
