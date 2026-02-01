@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
     <!--fonts here-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..700&display=swap" rel="stylesheet">
+    <!--Fascinate font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+
     <!--link to stylesheet-->
+    <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="styles.css">
     <title>Mad Libs</title>
     <script src="script.js" defer></script>
 </head>
-<body>
+<body >
     <header>
          <div id="logo">
-            <div id="square"><a href="index.html"></a></div>
+            <div id="square"><a href="../../index.html"></a></div>
             <h1>Grace Chen</h1>
         </div>
         <div id="banner">
@@ -26,7 +33,7 @@
         </div>
         <nav>
             <ul>
-                <li> <a href="index.html" class="button">Home</a></li>
+                <li> <a href="../../index.html" class="button">Home</a></li>
                 <li> <a href="#" class="button">Page 1</a></li>
                 <li> <a href="#" class="button">Page 2</a></li>
                 <li> <a href="#" class="button">Page 3</a></li>
@@ -34,9 +41,55 @@
         </nav>
     </header>
     <main>
+        <section>
+        <div class="madlib">
 
+        
+            <h1>MADditation</h1>
+            <p id="intro">No matter what happens during the day, good or bad, we can always come back to MADitation. Start by giving me a few words and I will compose your daily MADitation mantra for you. </p>
+        </div>
+        <div class="madlib">
+            <form method="post" action="processor.php"> 
+
+                <label for="place">Please name a place:</label>
+                <input type="text" name="place" id="place" >
+
+                <label for="item">Name an item:</label>
+                <input type="text" name="item" id="item" >
+
+                <label for="combo">I need a verb and adverb combination:</label>
+                <input type="text" name="combo" id="combo">
+
+                <label for="animal">Name an animal:</label>
+                <input type="text" name="animal" id="animal" >
+
+                <label for="adverb">Finally an adverb:</label>
+                <input type="text" name="adverb" id="adverb" >
+
+                <input type="submit" name = "send" value="Send Mantra" id="submit-btn">
+                
+            </form>
+            </div>
+        </section>
+      
+        <section>
+            <div class="madlib">
+                <img src="images/meditating-cat.png" alt="meditating cat" id="meditating-cat">
+            </div>
+            <div class="madlib">
+                <p>
+                    Yesterday I walked to the <span>text</span>. It was then I discovered I had forgotten my <span>text</span>. I will have to <span>text text</span> over the weekend. I went home and saw <span>text</span>. And I felt <span>text</span>.
+                </p>
+                <p>
+                    Inhale deeply through your nose. As you exhale slowly, release any tension in your shoulders and simply observe the rhythm of your breath. Whenever your mind wanders, gently acknowledge the thought and return your full attention to the sensation of the air entering and leaving your body.
+                </p>    
+
+                
+            </div>
+        </section>
     </main>
     <footer> 
+
             <p>©Grace Chen, 2026,</p>
             <p><a href="mailto:&#103;&#121;&#106;&#099;&#104;&#101;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email Me</a></p>   
     </footer>
