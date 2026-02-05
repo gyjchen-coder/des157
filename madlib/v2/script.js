@@ -17,7 +17,7 @@
         const adverb = document.querySelector('#adverb').value;
    
     
-    mantraPara.innerHTML = `Yesterday I walked to the <span>${place}</span>. It was then I discovered I had forgotten my <span>${item}</span>. I will have to <span> ${combo}</span> over the weekend. I went home and saw the <span>${animal}</span>. And I felt <span>${adverb}</span>`;
+    mantraPara.innerHTML = `<span>Yesterday</span> I walked to the <span>${place}</span>. It was then I discovered I had forgotten my <span>${item}</span>. I will have to  <span>${combo}</span> over the weekend. I went home and saw the <span>${animal}</span>. And I felt <span>${adverb}</span>`;
    
 
     inputView.style.display = "none";
