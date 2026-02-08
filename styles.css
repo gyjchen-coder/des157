@@ -186,6 +186,13 @@ article a {
     font-weight: 600;
     font-size: .8em;  
 }
+
+article a.in-text {
+    font-style: italic;
+    font-weight: 600;
+    font-size: .9em;  
+}
+
 .article-content {
     margin-bottom: 1em;
 }
@@ -273,6 +280,7 @@ footer a {
     font-weight: 600;
    
 }
+
 
 
 @media screen and (min-width: 600px) {
