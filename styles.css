@@ -152,7 +152,6 @@ h4 {
 }
 
 main h2 {
-    line-height: 0;
     font-weight: 300;
     font-size: 3em;
     letter-spacing: -0.03em;
@@ -219,13 +218,7 @@ header a {
     font-weight: 600;
     color: white;
     text-transform: uppercase;
-    border: 2px;
-    border-color: #1411bf;
     }  
-
-.card {
-    box-sizing: border-box;
-}
 
 .card ul {
     line-height: 1.6em;
@@ -239,10 +232,10 @@ time {
 }
 
 
-article img {
+.image-content img{
     display: block;
-    height: auto;
     width: 100%;
+    height: auto;
 }
 
 article {
@@ -265,7 +258,7 @@ article {
 
 figcaption {
     font-size: .8em;
-    max-width: 50vh;
+    max-width: 40vh;
     line-height: 1.6em;
 }
 
@@ -335,7 +328,7 @@ footer a {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        gap: 6em;
+        gap: 3em;
     }
 
     .article-content {
@@ -343,22 +336,20 @@ footer a {
         max-width: 50%;
     }
 
-    article img {
+    .image-content{
         flex: 1;
-        max-width: 50vh;
-        height: auto;
-}
+        max-width: 50%;
+    }
 
     .sketch {
-        display: flex;
         justify-content: center;
         width: 100%;
     }
 
     .sketch img {
-    display: block;
-    height: 40vh;
-    width: auto;
+        display: block;
+        height: 40vh;
+        width: auto;
 
 }
 
