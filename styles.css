@@ -5,7 +5,7 @@
 }
 
 body {
-    font-size: 14px;
+    font-size: 15px;
     font-family: IBM Plex Sans;
 }
 header, main, footer{
@@ -13,7 +13,7 @@ header, main, footer{
     margin: auto;
     font-size: 1em;
     color: #2B29EA;
-    line-height: 1.6em;
+    line-height: 1.8em;
 }
 
 #logo #square{
@@ -44,6 +44,7 @@ header, main, footer{
     font-weight: 400;
     font-size: 1.6em;
 }
+
 
 #banner  {
     position: relative;
@@ -127,29 +128,27 @@ main {
 
 h1, h2, h3 {
     color: #2B29EA;
-    font-family: IBM Plex Sans;
 }
 
 h1 {
     font-size: 1.6em;
     font-weight: 400;
-   
 }
 
 h2{
-    line-height: 1.5em;
     font-weight: 400;
-    padding-bottom: .5em;
+    padding-bottom: .2em;
+    margin-bottom: .3em;
 }
 
 h3{
-    line-height: 1.6em;
     font-size: 1.2em;
 }
 
 h4 {
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 1em;
 }
 
 main h2 {
@@ -195,6 +194,7 @@ article a.in-text {
 
 .article-content {
     margin-bottom: 1em;
+    width: 100%;
 }
 
 .article-content ol {
@@ -225,7 +225,6 @@ header a {
 
 .card {
     box-sizing: border-box;
-    margin-bottom: 1.5em;
 }
 
 .card ul {
@@ -247,7 +246,7 @@ article img {
 }
 
 article {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .sketch {
@@ -264,6 +263,11 @@ article {
     height: auto;
 }
 
+figcaption {
+    font-size: .8em;
+    max-width: 50vh;
+    line-height: 1.6em;
+}
 
 footer {
     padding: 10px 20px;
@@ -295,8 +299,9 @@ footer a {
         flex-direction: row;
         flex-wrap: wrap ;
         justify-content: flex-start;
-        gap: 3em;
-        margin:2em 0;
+        gap: 4em;
+        margin-bottom: 1em;
+       
     }
 
     .card {
@@ -330,7 +335,7 @@ footer a {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        gap: 3em;
+        gap: 6em;
     }
 
     .article-content {
@@ -340,7 +345,7 @@ footer a {
 
     article img {
         flex: 1;
-        max-width: 40%;
+        max-width: 50vh;
         height: auto;
 }
 
