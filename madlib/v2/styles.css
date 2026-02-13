@@ -8,15 +8,16 @@ main {
     font-size: 1.2em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start
     align-items: center;
     gap: 3em;
     min-height: 100vh;
+    height: auto;
     
 }
 
 section {
-    flex: 1;
+    
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -154,7 +155,7 @@ input {
 }
 
 #submit-btn {
-    width: 150px;
+    width: auto;
     padding: 1em;
     margin-left: auto;
     margin-top: 1.8em;
