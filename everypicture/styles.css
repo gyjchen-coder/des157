@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    background-color: black;
+}
+
+main {
+    background-color: black;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    min-height: 100vh;
+    height: auto;
+    
+    
+}
+
+
