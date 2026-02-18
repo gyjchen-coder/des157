@@ -7,7 +7,7 @@
 body {
     background-color: black;
     color: white;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.8em;
     font-family: IBM Plex Sans, sans-serif;
 
@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 2em;
     outline: 2px solid red;
    
@@ -27,10 +27,16 @@ main,footer {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.6em;
     font-weight: 800;
+    line-height: 1;
+    margin-top: 0;
 }
 
+h2 {
+    font-size: 1em;
+    font-weight: 400;
+}
 p {
     font-weight: 300;
 }
@@ -51,6 +57,9 @@ main #text {
     height: auto;
     border: 1px solid rgb(136, 136, 136);
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 #image {
@@ -58,8 +67,6 @@ main #text {
     
   
 }
-
-
 
 #image img {
     width: 100%;
@@ -78,37 +85,42 @@ main #text {
 .legend-row {
     display: flex;
     align-items: center;
-    gap: 8px;
-    height: 20px;
+    gap: 10px;
+    height: 30px;
 }
 
-.square {
-    width: 20px;
-    height: 20px;
-    flex: 0 0 20px;
-}
 
 #text strong {
     font-weight: 800;
 }
 
 
-.s1{
+#square-s1{
+    width: 30px;
+    height: 30px;
     background: rgb(29, 29, 29);
 }
 
-.s2{
+#square-s2{
+    width: 30px;
+    height: 30px;
     background: #3d3d3d;
 }
 
-.s3{
+#square-s3{
+    width: 30px;
+    height: 30px;
     background: #676566;
 }
-.s4{
+#square-s4{
+    width: 30px;
+    height: 30px;
     background: #b2b0b0;
 }
 
-.s5{
+#square-s5{
+    width: 30px;
+    height: 30px;
     background: white;
 }
 
