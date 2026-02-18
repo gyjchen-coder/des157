@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    line-height: 1.8em;
+    font-family: IBM Plex Sans, sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main,footer {
+    width: 100%;
+    max-width: 900px;
+    margin: 2em;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 800;
+}
+
+p {
+    font-weight: 300;
+}
+main {
+    background-color: black;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    text-align: left;
+    
+}
+
+#text {
+    flex: 1;
+    height: auto;
+    width: 250px;
+    background-color: #2B29EA;
+    padding: 1em;
+}
+
+#image {
+    flex: 2;
+}
+
+.grey-squares {
+    display:flex;
+    flex-direction: column;
+    gap:0;
+    margin: 1em 0;
+}
+
+.legend-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 20px;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+}
+
+#text strong {
+    font-weight: 800;
+}
+
+
+.s1{
+    background: rgb(29, 29, 29);
+}
+
+.s2{
+    background: #3d3d3d;
+}
+
+.s3{
+    background: #676566;
+}
+.s4{
+    background: #b2b0b0;
+}
+
+.s5{
+    background: white;
+}
+
+footer {
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+    padding: .5em 1em;
+    border: 1px solid rgb(136, 136, 136);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+}
