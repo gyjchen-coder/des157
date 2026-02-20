@@ -62,18 +62,6 @@ main #text {
     justify-content: flex-start;
 }
 
-#image {
-    flex: 2;
-    
-  
-}
-
-#image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    
-} 
 
 .grey-squares {
     display:flex;
@@ -137,4 +125,46 @@ a {
     text-decoration: none;
     font-weight: 600;
     font-style: italic;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 900/1000;
+
+}
+
+.container img,
+.container svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container svg {
+    opacity: 0;
+    pointer-events: all;
+}
+
+.overlay{
+    position: absolute;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+#xrayOverlay {
+    top: 40%;
+    left: 15%;
+}
+
+#xrayOverlayChest {
+    top: 42%;
+    left: 22%;
+}
+
+.base {
+    width: 100%;
 }
