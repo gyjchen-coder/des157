@@ -4,7 +4,7 @@
  
     /*------------xray images---------------*/
 
-      const myImages = [
+    const myImages = [
         "xray0.jpg",
         "xray1.jpg",
         "xray2.jpg"
@@ -15,7 +15,6 @@
     const prevBtn = document.querySelector('#previous');
 
     let currentImage = 0;
-
 
     const svgs = [
         document.querySelector('#svg0'),
@@ -46,7 +45,7 @@
     ];
 
 
-    /* ---------- HIDE FUNCTIONS ---------- */
+    /* --------- HIDE FUNCTIONS -------- */
 
     function hideAllSvg() {
         for (let i = 0; i<svgs.length; i++){
@@ -59,7 +58,7 @@
             labels[i].style.display = "none";
     }
 
-    /* ---------- show SVG ---------- */
+    /* -------- show SVG -------- */
 
     function showCorrectSVG() {
         hideAllSvg();
@@ -74,12 +73,12 @@
         if(currentImage > myImages.length - 1) {
             currentImage = 0;
         }
-        slide.src = "images/" + myImages[currentImage];
+        slide.src = `images/${myImages[currentImage]}`;
         hideAllLabels();
         showCorrectSVG();
     }
 
-    /* ---------- previous--------- */
+    /* ---------- previous------- */
 
     function previousPhoto() {
 
@@ -88,7 +87,7 @@
         if(currentImage < 0 ){
             currentImage = myImages.length -1;
         }
-        slide.src = "images/" + myImages[currentImage];
+        slide.src = `images/${myImages[currentImage]}`;
         hideAllLabels();
         showCorrectSVG();
     }
