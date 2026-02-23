@@ -15,90 +15,76 @@
     <title>Every Picture</title>
     <script src="script.js" defer></script>
 </head>
-<body >
+<body>
     <main>
-        <section id="text">
+        <section id="text-section">
             <h1>X-RAY 101</h1>    
             <p><strong>An X-ray</strong> shows different shades of grays that represent different tissues and bones. Denser structures like bone and metal absorb and block more X-rays, so they appear white, while less dense materials like air allow X-rays to pass through and appear black, with soft tissues appearing in shades of gray in between.</p>
                
             <div class="grey-squares">
-                    <div class="legend-row">
-                        <div id="square-s1"></div>
-                        <h4>Air</h4>
-                    </div>
-                    <div class="legend-row">
-                        <div id="square-s2"></div>
-                        <h4>Fat</h4>
-                    </div>
-                    <div class="legend-row">
-                        <div id="square-s3"></div>
-                        <h4>Soft Tissue</h4>
-                    </div>
-                    <div class="legend-row">
-                        <div id="square-s4"></div>
-                        <h4>Bone</h4>
-                    </div>
-                     <div class="legend-row">
-                        <div id="square-s5"></div>
-                        <h4>Metal</h4>
-                    </div>   
-                </div>
+                <div class="legend-row"><div id="square-s1"></div><h4>Air</h4></div>
+                <div class="legend-row"><div id="square-s2"></div><h4>Fat</h4></div>
+                <div class="legend-row"><div id="square-s3"></div><h4>Soft Tissue</h4></div>
+                <div class="legend-row"><div id="square-s4"></div><h4>Bone</h4></div>
+                <div class="legend-row"><div id="square-s5"></div><h4>Metal</h4></div>   
+            </div>
         </section>
+
         <section id="image-section">
-            <h2><span>>> </span>Click on the Blue Dot to learn more: </h2>
-            <div class="container">
+            <h2><span>>> </span>Hover on the Blue Dot to learn more: </h2>
+            
+            <div class="xray-container">
+                <div id="label-container">
+                    <div id="label0" class="xray-label">
+                        <h4>Bone</h4>
+                        <p>Bone usually has a light grey color</p>
+                    </div>
+                    <div id="label1" class="xray-label">
+                        <h4>Tissues</h4>
+                        <p>muscle is considered a tissue and usually has a medium grey color</p>
+                    </div>
+                    <div id="label2" class="xray-label">
+                        <h4>Fat</h4>
+                        <p>Fat is more porus than tissues so appear as a darker grey, you can see the edge where the muscle tissue meets the fat.</p>
+                    </div>
+                    <div id="label3" class="xray-label">
+                        <h4>Fat</h4>
+                        <p>Fat is more porus than tissues so appear as a darker grey, you can see the edge where the muscle tissue meets the fat.</p>
+                    </div>
+                    <div id="label4" class="xray-label">
+                        <h4>Metal</h4>
+                        <p>The patient is wearing a pacemaker which has</p>
+                    </div>
+                </div>
+                
+                <div id="overlay"></div>
+                <img id="xray0" src="images/xray0.jpg" alt="xray">          
+            </div>
 
-                <!--SVG MAP FOR XRAY 0-->
-                 <img src = "images/xray0.jpg" alt="xray-shoulder" id="myImage" >
-                 <svg id="svg0" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 550">
-                    <rect class="map" x="404" y="115" width="103" height="103" id="dot0"/>  
-                    <rect class="map" x="109" y="293.8" width="80.4" height="89.2" id="dot1"/>
-                    <rect class="map" x="11" y="351.8" width="80.4" height="89.2" id="dot2"/>
+            <template id="overlay-0">
+                <svg viewBox="0 0 600 550">
+                    <rect class="hotspot" id="0" x="404" y="115" width="103" height="103" />
+                    <rect class="hotspot" id="1" x="109" y="293.8" width="80.4" height="89.2" />
+                    <rect class="hotspot" id="2" x="11" y="351.8" width="80.4" height="89.2"/>
                 </svg>
+            </template>
 
-                <!--SVG MAP FOR XRAY 1-->
-                <svg id="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 578">
-                    <rect class="map" x="488" y="329.12" width="105" height="150.65" fill="#b8b1b0" id="dot3"/>
+            <template id="overlay-1">
+                <svg viewBox="0 0 600 578">
+                    <rect class="hotspot" id="3" x="488" y="329.12" width="105" height="150.65" />
                 </svg>
-                    
-                <!--SVG MAP FOR XRAY 2-->
-                <svg id="svg2" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 492">
-                    <rect class="map" x="365" y="131" width="138" height="138" id="dot4"/>
+            </template>
+
+            <template id="overlay-2">
+                <svg viewBox="0 0 600 492">
+                    <rect class="hotspot" id="4" x="365" y="131" width="138" height="138" />
                 </svg>
-
-        
-                <div id="label1" class="label">
-                    <h3>Bone</h3>
-                    <p> temp text adsaw weh w aweoa sdf;wehsdf8wehf hsdfs sdfsdf</p>
-                </div>
-
-                <div id="label2" class="label">
-                    <h3>Tissues</h3>
-                    <p> temp text adsaw weh w aweoa sdf;wehsdf8wehf hsdfs sdfsdf</p>
-                </div>
-
-                <div id="label3" class="label">
-                    <h3>Fat</h3>
-                    <p> temp text adsaw weh w aweoa sdf;wehsdf8wehf hsdfs sdfsdf</p>
-                </div>
-
-                <div id="label4" class="label">
-                    <h3>Fat</h3>
-                    <p> temp text adsaw weh w aweoa sdf;wehsdf8wehf hsdfs sdfsdf</p>
-                </div>
-
-                <div id="label5" class="label">
-                    <h3>Metal</h3>
-                    <p> temp text adsaw weh w aweoa sdf;wehsdf8wehf hsdfs sdfsdf</p>
-                </div>
-
-            </div>  
+            </template>
 
             <div class="controls">
-                <button id="previous">previous</button>  
-                <button id="next">next</button>   
+                <button id="previous-btn">previous</button>  
+                <button id="next-btn">next</button>   
             </div>
-            
         </section>  
     </main> 
     <footer>

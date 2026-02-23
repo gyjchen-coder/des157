@@ -7,9 +7,9 @@
 body {
     background-color: rgb(36, 36, 36);
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.8em;
-    font-family: IBM Plex Sans, sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
 
     min-height: 100vh;
     display: flex;
@@ -26,6 +26,7 @@ main {
     gap: 2em;
     text-align: left;
     margin-bottom: 1em;
+    max-height: 740px; 
 }
 
 main,footer {
@@ -33,26 +34,29 @@ main,footer {
     max-width: 1200px;
 }
 
-main #text {
+main #text-section {
     border: 1px solid rgb(136, 136, 136);
-    padding: 1em;
-    margin-bottom: 2em;
+    padding: 0 1em;
 }
+
+
 
 h1 {
     font-size: 2.6em;
     font-weight: 800;
+    line-height: 2.4rem;
+    margin: 0 0 .6em 0;
 }
 
 h2 {
-    font-size: 1.6em;
-    font-weight: 300;
-    margin-bottom: 1em;
+    font-size: 1.6rem;
+    font-weight: 200;
+    margin-bottom: .5em;
 }
 
 h2 span {
     font-size: 1.6em;
-    font-weight: 800;
+    font-weight: 600;
     color: #2B29EA;
 }
 
@@ -62,63 +66,114 @@ h3 {
 }
 
 p {
-    color: #d3d1d1;
-    font-weight: 300;
+    color: #ffffff;
+    font-weight: 200;
 }
 
 h4{
     color: #ffffff;
     font-weight: 500;
-    font-size: .9em;
+    font-size: clamp(0.8rem, 1vw, 1.4rem);
+    text-transform: uppercase;
 }
 
-.grey-squares {
-    display:flex;
-    flex-direction: column;
-    gap:0;
-    margin: 1em 0;
+.grey-squares{
+    margin: 2em 0
 }
 
-.legend-row {
+.legend-row { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    height: 30px; 
+}
+
+#square-s1{width: 30px; height: 30px; background: rgb(29, 29, 29); border: 1px solid rgb(95, 95, 95);}
+#square-s2{width: 30px; height: 30px; background: #3d3d3d;}
+#square-s3{width: 30px; height: 30px; background: #676566;}
+#square-s4{width: 30px; height: 30px; background: #b2b0b0;}
+#square-s5{width: 30px; height: 30px; background: white;}
+
+
+.xray-container {
+    position: relative;
+    width: 100%;
+    max-height: 750px;
+}
+
+#xray0 { 
+    width: 100%; 
+    height: auto; 
+    max-height: 750px;
+    position: relative; 
+    z-index: 1; }
+
+#overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 10;
+}
+
+#overlay svg { 
+    width: 100%; 
+}
+
+img {
+    max-height: 700px;
+}
+
+#label-container {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; 
+    z-index: 20;
+}
+
+.xray-label {
+    position: absolute;
+    opacity: 0; 
+    background-color: #2B29EA;
+    color: white;
+
+    width: clamp(140px, 25vw, 200px);
+
+    padding: clamp(.3rem, 1vw, 1rem);
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    line-height: 1.4;
+
+    transition: opacity 0.3s ease;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    height: 30px;
+    flex-direction: column;  
 }
 
 
-#text strong {
-    font-weight: 800;
+#label0 { top: 40%; left: 55%; }
+#label1 { top: 20%; left: 5%; }
+#label2 { top: 20%; left: -15%; }
+#label3 { top: 30%; left: 45%; }
+#label4 { top: 60%; left: 40%; }
+
+.hotspot {
+    fill: #2B29EA;
+    opacity: 0; 
+    cursor: pointer;
+    pointer-events: all; 
 }
 
+.hotspot:hover { opacity: 0; }
 
-#square-s1{
-    width: 30px;
-    height: 30px;
-    background: rgb(29, 29, 29);
-}
+.controls { 
+    display: flex; 
+    gap: 1em; 
+    margin-top: 1em; }
 
-#square-s2{
-    width: 30px;
-    height: 30px;
-    background: #3d3d3d;
-}
-
-#square-s3{
-    width: 30px;
-    height: 30px;
-    background: #676566;
-}
-#square-s4{
-    width: 30px;
-    height: 30px;
-    background: #b2b0b0;
-}
-
-#square-s5{
-    width: 30px;
-    height: 30px;
-    background: white;
+button {
+    background-color: #2B29EA; 
+    color: white; border: none;
+    padding: 1em; width: 100%; 
+    cursor: pointer; 
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 footer {
@@ -134,90 +189,8 @@ a {
     font-style: italic;
 }
 
-.container {
-    position: relative;
-    width: 100%;
-    
-    aspect-ratio: 600 / 550;
-    margin: 0 auto;
-    max-height: 70vh;
-
-}
-
-.container img,
-.container svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-.map {
-    fill: white;
-    opacity: 0;
-    pointer-events: all;
-    cursor: pointer;
-}
-
-
-.label {
-    position: absolute;
-    background: #2B29EA;;
-    color: white;
-    padding: 1em;
-    font-size: .8em;
-    line-height: 1.4em;
-    opacity: 1;
-    max-width: 140px;
-}
-
-#label1 {
-    top: 40%; left: 70%;
-}
-
-#label2 {
-    top:26%; left: 10%;
-}
-
-#label3 {
-    top:35%; left: -15%;
-}
-
-#label4 {
-    top:45%; left: 60%;
-}
-
-#label5 {
-    top:20%; left: 40%;
-}
-
-.controls {
-    margin-top: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 1.5em;
-    width: 100%;
-}
-
-button {
-    background-color: #2B29EA;
-    padding: 1em;
-    border: none;
-    color: white;
-    cursor: pointer;
-    width: 100%;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: .9em;
-}
-
-
-
 @media screen and (min-width: 600px) {
-
+    
 main {
     font-size: 1.2em;
     display: flex;
@@ -227,7 +200,7 @@ main {
     margin-bottom: 1em;
 }
 
-main #text {
+main #text-section {
     flex: 1;
     height: auto;
     border: 1px solid rgb(136, 136, 136);
@@ -241,6 +214,5 @@ main #image-section {
     flex: 2;
     max-width: calc(600px - 2em);
 }
-
 
 }

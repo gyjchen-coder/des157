@@ -1,122 +1,69 @@
 (function(){
     'use strict';
-    console.log('reading js');
- 
-    /*------------xray images---------------*/
+    console.log
 
-    const myImages = [
-        "xray0.jpg",
-        "xray1.jpg",
-        "xray2.jpg"
-    ];
+    let currentIndex = 0;
+    const totalImages = 3;
 
-    const slide = document.querySelector('#myImage');
-    const nextBtn = document.querySelector('#next');
-    const prevBtn = document.querySelector('#previous');
+    const xrayImg = document.querySelector("#xray0");
+    const OverlayDiv = document.querySelector("#overlay");
 
-    let currentImage = 0;
+    /*--------------logic----------*/
+    function setupHovers() {
+        const hotspots = document.querySelectorAll('.hotspot');
+        
+        hotspots.forEach(function(spot) {
+            const spotId = spot.getAttribute('id');
+            const targetLabel = document.querySelector("#label" + spotId);
 
-    const svgs = [
-        document.querySelector('#svg0'),
-        document.querySelector('#svg1'),
-        document.querySelector('#svg2')
-    ];
+            spot.addEventListener('mouseenter', function() {
+                if (targetLabel) { 
+                    targetLabel.style.opacity = "1"; 
+                }
+            });
 
-
-    /* ---------- LABEL ARRAY ---------- */
-
-    const labels = [
-        document.querySelector('#label1'),
-        document.querySelector('#label2'),
-        document.querySelector('#label3'),
-        document.querySelector('#label4'),
-        document.querySelector('#label5'),
-    ];
-
-
-    /* ---------- HOTSPOT ARRAY ---------- */
-
-    const dots = [
-        document.querySelector('#dot0'),
-        document.querySelector('#dot1'),
-        document.querySelector('#dot2'),
-        document.querySelector('#dot3'),
-        document.querySelector('#dot4')
-    ];
-
-
-    /* --------- HIDE FUNCTIONS -------- */
-
-    function hideAllSvg() {
-        for (let i = 0; i<svgs.length; i++){
-            svgs[i].style.display = "none";
-        }
-    }
-
-    function hideAllLabels() {
-        for (let i = 0; i < labels.length; i++)
-            labels[i].style.display = "none";
-    }
-
-    /* -------- show SVG -------- */
-
-    function showCorrectSVG() {
-        hideAllSvg();
-        svgs[currentImage].style.display = "block";
-    }
-
-    /* ---------- next---------- */
-
-    function nextPhoto() {
-        currentImage++;
-
-        if(currentImage > myImages.length - 1) {
-            currentImage = 0;
-        }
-        slide.src = `images/${myImages[currentImage]}`;
-        hideAllLabels();
-        showCorrectSVG();
-    }
-
-    /* ---------- previous------- */
-
-    function previousPhoto() {
-
-        currentImage--;
-
-        if(currentImage < 0 ){
-            currentImage = myImages.length -1;
-        }
-        slide.src = `images/${myImages[currentImage]}`;
-        hideAllLabels();
-        showCorrectSVG();
-    }
-
-    nextBtn.addEventListener('click', nextPhoto);
-    prevBtn.addEventListener('click', previousPhoto);
-
-    /* ---------- hotspot hover--------- */
-
-    for (let i=0; i < dots.length; i++) {
-        dots[i].addEventListener('mouseenter',function (){
-            hideAllLabels();
-
-            if (i === 0) labels [0].style.display = "block";
-            else if (i=== 1) labels[1].style.display = "block";
-            else if (i=== 2) labels[2].style.display = "block";
-            else if (i=== 3) labels[3].style.display = "block";
-            else if (i=== 4) labels[4].style.display = "block"; 
-        });
-
-        dots[i].addEventListener('mouseleave',function() {
-            hideAllLabels();
+            spot.addEventListener('mouseleave', function() {
+                if (targetLabel) { 
+                    targetLabel.style.opacity = "0"; 
+                }
+            });
         });
     }
 
-hideAllLabels();
-showCorrectSVG();
+    /*--------------------RESET-------------*/
+    function updateDisplay() {
 
+        xrayImg.src = "images/xray" + currentIndex + ".jpg";
 
+        const template = document.querySelector("#overlay-" + currentIndex);
+        const templateContent = template.innerHTML;
 
+        if (template !== null) {
+            OverlayDiv.innerHTML = templateContent;
+        } else {
+            console.log
+        }
+        
+        document.querySelectorAll('.xray-label').forEach(function(whateverlabel) {
+            whateverlabel.style.opacity = "0";
+        });
 
+        setupHovers();
+    }
+
+    /*-----------------CONTROL-------------*/
+
+    document.querySelector("#next-btn").addEventListener("click", function() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        updateDisplay();
+    });
+
+    document.querySelector("#previous-btn").addEventListener("click", function() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        updateDisplay();
+    });
+    /*----------------LOAD FIRST IMG-------------*/
+    updateDisplay();
+
+    
 })();
