@@ -4,54 +4,54 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-color: rgb(36, 36, 36);
     color: white;
     font-size: 14px;
     line-height: 1.8em;
     font-family: "IBM Plex Sans", sans-serif;
-
+    margin: auto;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     padding: 2em;
-    outline: 2px solid red;
-   
+    max-width: 1100px;  
+
 }
+
 
 main {
     font-size: 1.2em;
-    gap: 2em;
     text-align: left;
     margin-bottom: 1em;
-    max-height: 740px; 
+    height: 100%;
 }
 
-main,footer {
-    width: 100%;
-    max-width: 1200px;
-}
 
 main #text-section {
     border: 1px solid rgb(136, 136, 136);
-    padding: 0 1em;
+    padding: 1.5em;
+    margin-bottom: 1em;
 }
 
+
+main #image-section {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
 
 
 h1 {
     font-size: 2.6em;
     font-weight: 800;
     line-height: 2.4rem;
-    margin: 0 0 .6em 0;
+    margin: 0 0 .4em 0;
 }
 
 h2 {
-    font-size: 1.6rem;
-    font-weight: 200;
-    margin-bottom: .5em;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 1em;
 }
 
 h2 span {
@@ -61,20 +61,21 @@ h2 span {
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 600;
+    text-transform: uppercase;
+
 }
 
 p {
-    color: #ffffff;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 h4{
     color: #ffffff;
     font-weight: 500;
-    font-size: clamp(0.8rem, 1vw, 1.4rem);
-    text-transform: uppercase;
+    font-size: 1rem;
+    
 }
 
 .grey-squares{
@@ -98,33 +99,34 @@ h4{
 .xray-container {
     position: relative;
     width: 100%;
-    max-height: 750px;
 }
 
 #xray0 { 
-    width: 100%; 
-    height: auto; 
-    max-height: 750px;
-    position: relative; 
-    z-index: 1; }
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-#overlay {
+#overlay{
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    inset: 0;
     z-index: 10;
 }
 
+
 #overlay svg { 
     width: 100%; 
-}
+    height: 100%;
+    display: block;
 
-img {
-    max-height: 700px;
 }
 
 #label-container {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
     pointer-events: none; 
     z-index: 20;
 }
@@ -137,7 +139,7 @@ img {
 
     width: clamp(140px, 25vw, 200px);
 
-    padding: clamp(.3rem, 1vw, 1rem);
+    padding: clamp(.6rem, 1vw, 1rem);
     font-size: clamp(0.7rem, 1vw, 1rem);
     line-height: 1.4;
 
@@ -148,8 +150,8 @@ img {
 
 
 #label0 { top: 40%; left: 55%; }
-#label1 { top: 20%; left: 5%; }
-#label2 { top: 20%; left: -15%; }
+#label1 { top: 30%; left: 5%; }
+#label2 { top: 10%; left: 5%; }
 #label3 { top: 30%; left: 45%; }
 #label4 { top: 60%; left: 40%; }
 
@@ -164,22 +166,30 @@ img {
 
 .controls { 
     display: flex; 
-    gap: 1em; 
-    margin-top: 1em; }
+    justify-content: flex-start;
+    gap: 2em;
+    margin-top: 1em; 
+    width: 100%;
+}
 
 button {
     background-color: #2B29EA; 
-    color: white; border: none;
-    padding: 1em; width: 100%; 
+    color: white;
+    border: none;
+    padding: 1em; 
+    min-width: 100px;
     cursor: pointer; 
     font-size: 1rem;
     font-weight: 500;
 }
 
+
+
 footer {
     text-align: left;
     padding: .5em 1em;
     border: 1px solid rgb(136, 136, 136);
+    width: 100%;
 }
 
 a {
@@ -191,28 +201,51 @@ a {
 
 @media screen and (min-width: 600px) {
     
+h2 {
+    margin-bottom: .5em;
+}
 main {
     font-size: 1.2em;
     display: flex;
     flex-direction: row;
-    gap: 2em;
     text-align: left;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    gap: 2em;
 }
 
 main #text-section {
     flex: 1;
     height: auto;
     border: 1px solid rgb(136, 136, 136);
-    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-bottom: 0;
+    
 }
 
 main #image-section {
     flex: 2;
-    max-width: calc(600px - 2em);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
 }
+
+.xray-container {
+    aspect-ratio: 600 / 550;
+    max-height: 50vh;
+    width: auto;
+    margin: 0;
+}
+
+#xray0 {
+    width: 100%;
+    height: 100%;
+    display: block;
+  
+}
+
+
 
 }
