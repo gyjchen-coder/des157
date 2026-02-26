@@ -8,7 +8,7 @@
     const xrayImg = document.querySelector("#xray0");
     const OverlayDiv = document.querySelector("#overlay");
 
-    /*--------------logic----------*/
+    /*-----------find label and turn on/off ----------*/
     function setupHovers() {
         const hotspots = document.querySelectorAll('.hotspot');
         
@@ -36,16 +36,10 @@
         xrayImg.src = "images/xray" + currentIndex + ".jpg";
 
         const template = document.querySelector("#overlay-" + currentIndex);
-        const templateContent = template.innerHTML;
+        OverlayDiv.innerHTML = template.innerHTML
 
-        if (template !== null) {
-            OverlayDiv.innerHTML = templateContent;
-        } else {
-            console.log
-        }
-        
-        document.querySelectorAll('.xray-label').forEach(function(whateverlabel) {
-            whateverlabel.style.opacity = "0";
+        document.querySelectorAll('.xray-label').forEach(function(eachlabel) {
+            eachlabel.style.opacity = "0";
         });
 
         setupHovers();
