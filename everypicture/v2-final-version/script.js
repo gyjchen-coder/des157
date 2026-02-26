@@ -1,63 +1,57 @@
-(function(){
-    'use strict';
-    console.log
+(function () {
+  "use strict";
+  console.log("reading js");
 
-    let currentIndex = 0;
-    const totalImages = 3;
+  var currentIndex = 0;
 
-    const xrayImg = document.querySelector("#xray0");
-    const OverlayDiv = document.querySelector("#overlay");
+//---------------hide all labels--------------//
+  function hideAllLabels() {
+    document.querySelectorAll(".xray-label").forEach(function (eachLabel) {
+      eachLabel.style.opacity = "0";
+    });
+  }
 
-    /*-----------find label and turn on/off ----------*/
-    function setupHovers() {
-        const hotspots = document.querySelectorAll('.hotspot');
-        
-        hotspots.forEach(function(spot) {
-            const spotId = spot.getAttribute('id');
-            const targetLabel = document.querySelector("#label" + spotId);
+//---------------show or hide labels--------------//
+function setupHovers() {
+  document.querySelectorAll(".hotspot").forEach(function (spot) {
+   
+    const spotId = spot.getAttribute("id").replace("hotspot", ""); 
+    const label = document.querySelector("#label" + spotId);
 
-            spot.addEventListener('mouseenter', function() {
-                if (targetLabel) { 
-                    targetLabel.style.opacity = "1"; 
-                }
-            });
+    spot.onmouseenter = function () {
+      if (label) label.style.opacity = "1";
+    };
 
-            spot.addEventListener('mouseleave', function() {
-                if (targetLabel) { 
-                    targetLabel.style.opacity = "0"; 
-                }
-            });
-        });
+    spot.onmouseleave = function () {
+      if (label) label.style.opacity = "0";
+    };
+  });
+}
+
+//––––––––––––––hide all img + overlay––––––––––––––––––//
+  function updateDisplay() {
+    for (let i = 0; i <= 2; i++) {
+      document.querySelector("#xray" + i).style.display = "none";
+      document.querySelector("#overlay" + i).style.display = "none";
     }
 
-    /*--------------------RESET-------------*/
-    function updateDisplay() {
+    //––––––––––––––show current
+    document.querySelector("#xray" + currentIndex).style.display = "block";
+    document.querySelector("#overlay" + currentIndex).style.display = "block";
 
-        xrayImg.src = "images/xray" + currentIndex + ".jpg";
+    hideAllLabels();
+  }
 
-        const template = document.querySelector("#overlay-" + currentIndex);
-        OverlayDiv.innerHTML = template.innerHTML
-
-        document.querySelectorAll('.xray-label').forEach(function(eachlabel) {
-            eachlabel.style.opacity = "0";
-        });
-
-        setupHovers();
-    }
-
-    /*-----------------CONTROL-------------*/
-
-    document.querySelector("#next-btn").addEventListener("click", function() {
-        currentIndex = (currentIndex + 1) % totalImages;
-        updateDisplay();
-    });
-
-    document.querySelector("#previous-btn").addEventListener("click", function() {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        updateDisplay();
-    });
-    /*----------------LOAD FIRST IMG-------------*/
+  document.querySelector("#next-btn").addEventListener("click", function () {
+    currentIndex = (currentIndex + 1) % 3;
     updateDisplay();
+  });
 
-    
+  document.querySelector("#previous-btn").addEventListener("click", function () {
+    currentIndex = (currentIndex + 2) % 3; // go back
+    updateDisplay();
+  });
+
+  setupHovers();
+  updateDisplay();
 })();
