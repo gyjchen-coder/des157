@@ -2,16 +2,20 @@
   "use strict";
   console.log("reading js");
 
-  var currentIndex = 0;
+  let currentIndex = 0;
+  const totalImages = 3;
 
 //---------------hide all labels--------------//
+
   function hideAllLabels() {
     document.querySelectorAll(".xray-label").forEach(function (eachLabel) {
       eachLabel.style.opacity = "0";
     });
   }
 
+
 //---------------show or hide labels--------------//
+
 function setupHovers() {
   document.querySelectorAll(".hotspot").forEach(function (spot) {
    
@@ -29,6 +33,7 @@ function setupHovers() {
 }
 
 //––––––––––––––hide all img + overlay––––––––––––––––––//
+
   function updateDisplay() {
     for (let i = 0; i <= 2; i++) {
       document.querySelector("#xray" + i).style.display = "none";
@@ -42,16 +47,27 @@ function setupHovers() {
     hideAllLabels();
   }
 
-  document.querySelector("#next-btn").addEventListener("click", function () {
-    currentIndex = (currentIndex + 1) % 3;
-    updateDisplay();
-  });
 
-  document.querySelector("#previous-btn").addEventListener("click", function () {
-    currentIndex = (currentIndex + 2) % 3; // go back
-    updateDisplay();
-  });
+function previousBtn() {
+  currentIndex--; 
+  if (currentIndex < 0) {
+    currentIndex = totalImages - 1;
+  }
+  updateDisplay(); 
+}
 
-  setupHovers();
+function nextBtn() {
+  currentIndex++; 
+  if (currentIndex > totalImages-1) {
+    currentIndex = 0;
+  }
   updateDisplay();
+}
+document.querySelector("#previous-btn").addEventListener("click",previousBtn);
+document.querySelector("#next-btn").addEventListener("click", nextBtn);
+
+setupHovers();
+updateDisplay();
+
+
 })();
