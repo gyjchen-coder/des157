@@ -161,9 +161,9 @@ main #image-section {
 }
 
 
-#label0 { top: 40%; left: 55%; }
-#label1 { top: 10%; left: 5%; }
-#label2 { top: 30%; left: 25%; }
+#label0 { top: 30%; left: 55%; }
+#label1 { top: 5%; left: 5%; }
+#label2 { top: 35%; left: 15%; }
 #label3 { top: 25%; left: 35%; }
 #label4 { top: 50%; left: 40%; }
 
@@ -196,7 +196,13 @@ button {
     
 }
 
+button:hover {
+    background-color: #5451fc;
+}
 
+button:active {
+    transform: translateY(2px);
+}
 
 footer {
     text-align: left;
@@ -210,6 +216,10 @@ a {
     text-decoration: none;
     font-weight: 600;
     font-style: italic;
+}
+
+a:hover {
+    color: #5451fc;
 }
 
 @media screen and (min-width: 600px) {
