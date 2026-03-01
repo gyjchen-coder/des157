@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +10,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..700&display=swap" rel="stylesheet">
-    
+
     <!--link to stylesheet-->
     <link rel="stylesheet" href="styles.css">
     <title>Every Picture</title>
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <main>
         <section id="text-section">
-            <h1>X-RAY 101</h1>    
+            <h1>X-RAY 101</h1>
             <p><strong>An X-ray</strong> shows different shades of grays that represent different tissues and bones. Denser structures like bone and metal absorb and block more X-rays, so they appear white, while less dense materials like air allow X-rays to pass through and appear black, with soft tissues appearing in shades of gray in between.</p>
-               
+
             <div class="grey-squares">
-                <div class="legend-row"><div id="square-s1"></div><h4>Air</h4></div>
-                <div class="legend-row"><div id="square-s2"></div><h4>Fat</h4></div>
-                <div class="legend-row"><div id="square-s3"></div><h4>Soft Tissue</h4></div>
-                <div class="legend-row"><div id="square-s4"></div><h4>Bone</h4></div>
-                <div class="legend-row"><div id="square-s5"></div><h4>Metal</h4></div>   
+                <div class="legend-row">
+                    <div id="square-s1"></div>
+                    <h4>Air</h4>
+                </div>
+                <div class="legend-row">
+                    <div id="square-s2"></div>
+                    <h4>Fat</h4>
+                </div>
+                <div class="legend-row">
+                    <div id="square-s3"></div>
+                    <h4>Soft Tissue</h4>
+                </div>
+                <div class="legend-row">
+                    <div id="square-s4"></div>
+                    <h4>Bone</h4>
+                </div>
+                <div class="legend-row">
+                    <div id="square-s5"></div>
+                    <h4>Metal</h4>
+                </div>
             </div>
         </section>
 
         <section id="image-section">
             <h2><span>>> </span>Hover over the Blue Dots to learn more: </h2>
-            
+
             <div class="xray-container">
                 <div id="label-container">
                     <div id="label0" class="xray-label">
@@ -56,41 +73,52 @@
                         <p>The patient is wearing a pacemaker containing metal parts which generally appear white.</p>
                     </div>
                 </div>
-                
+
                 <div id="overlay0">
-                    <svg viewBox="0 0 600 550" preserveAspectRatio="xMinYMin meet">
-                        <rect class="hotspot" id="hotspot0" x="404" y="115" width="103" height="103" />
-                        <rect class="hotspot" id="hotspot1" x="109" y="293.8" width="80.4" height="89.2" />
-                        <rect class="hotspot" id="hotspot2" x="11" y="351.8" width="80.4" height="89.2" />
+                    <svg viewBox="0 0 600 601" preserveAspectRatio="xMinYMin meet">
+                        <rect class="hotspot" id="hotspot0" x="359.21" y="109.86" width="119.58" height="85.51" fill="#231f20" />
+                        <rect class="hotspot" id="hotspot1" x="1.06" y="243.83" width="88.61" height="96.17" fill="#231f20" />
+                        <rect class="hotspot" id="hotspot2" x="48.5" y="385.46" width="88.61" height="96.27" fill="#231f20" />
+                        <rect y="0" width="600" height="601" fill="none" />
                     </svg>
                 </div>
                 <img id="xray0" src="images/xray0.jpg" alt="xray">
-                    
+
                 <div id="overlay1">
                     <svg viewBox="0 0 600 578" preserveAspectRatio="xMinYMin meet">
                         <rect class="hotspot" id="hotspot3" x="488" y="329.12" width="105" height="150.65" />
-                    </svg> 
+                    </svg>
                 </div>
-                <img id="xray1" src="images/xray1.jpg" alt="xray">  
+                <img id="xray1" src="images/xray1.jpg" alt="xray">
 
                 <div id="overlay2">
                     <svg viewBox="0 0 600 492" preserveAspectRatio="xMinYMin meet">
                         <rect class="hotspot" id="hotspot4" x="365" y="131" width="138" height="138" />
                     </svg>
                 </div>
-                <img id="xray2" src="images/xray2.jpg" alt="xray">  
-                        
+                <img id="xray2" src="images/xray2.jpg" alt="xray">
+
             </div>
 
             <div class="controls">
-                <button id="previous-btn">Previous</button>  
-                <button id="next-btn">Next</button>   
+                <button id="previous-btn">Previous</button>
+                <button id="next-btn">Next</button>
             </div>
-        </section>  
-    </main> 
+        </section>
+    </main>
     <footer>
-        <p>©Grace Chen, 2026,</p>
-        <p><a href="mailto:&#103;&#121;&#106;&#099;&#104;&#101;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email Me</a></p>   
-    </footer>    
+        <div id="citations">
+            <div>
+                <p><a href="mailto:&#103;&#121;&#106;&#099;&#104;&#101;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email Me</a></p>
+                <p>©Grace Chen, 2026,</p>
+            </div>
+
+            <p> List of x-ray image
+                <a href="citations.html" rel="citations">citations.</a>
+            </p>
+
+        </div>
+    </footer>
 </body>
+
 </html>
