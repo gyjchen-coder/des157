@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    font-size: 14px;
+    font-family: "IBM Plex Sans", sans-serif;
+    margin: auto;
+    padding: 2em;
+    max-width: 1000px; 
+    color: #b2b2b2; 
+
+}
+
+#game-logo {
+    margin-bottom: .5em;
+    max-width: 260px;
+    width: 100%;
+}
+
+
+header, main, {
+    padding: 2em;
+    max-width: 1020px;
+    margin: auto;
+    font-size: 1em;
+    color: rgb(210, 210, 210);
+    line-height: 1.8em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;   
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+
+#text-section {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 1em 0;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+    max-width: 100%;
+    padding: 1em ;
+    background-color: #898c95;
+    border: none;
+    appearance: none;
+}
+
+
+
+main #game-section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+
+}
+
+#text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#game-section {
+    flex: 3;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1em 2em 2em 2em;
+    background-color: #5e5e5e;
+    width: 100%;
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+a { 
+    color: #d6d6d6;
+    font-size: 1em;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+}
+
+#footer p {
+    color: #d6d6d6;
+}
+
+a:visited {
+    color: #d6d6d6;;
+}
+
+a:hover {
+    color: #af88ff;
+  
+}
+
+#game-section .card-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 2px;
+}
+
+#game-section .card-group div {
+    flex: 0 0 calc(33.33% - 2px);
+    max-width: 150px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-content: center;
+    justify-self: center;
+}
+
+.card-group .color1 {
+    background-color: #5b24c5;  
+}
+
+.card-group .color2 {
+    background-color: #3e0097;
+}
+
+#score-text {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+h2 {
+    font-size: 8em;
+    font-weight: 600;
+    line-height: .8;
+    margin-top: 0;
+}
+
+
+@media screen and (min-width: 600px) {
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;   
+}
+
+#text-section {
+    flex: 1;
+}
+
+#game-section {
+    flex: 3;
+}
+
+#game-section .card-group div {
+    flex: 0 0 calc(25%-2px);
+    aspect-ratio: 1/1;
+}
+
+#game-section .card-group {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+
+}
+
+
