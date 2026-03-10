@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>X-Ray Memory Game</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <section id="text-section">
+            <button id="cheat-code"></button>
+            <img id="game-logo" src="images/game-logo.svg" alt="game-logo">
+            <p>Match the anatomical term with the correct X-ray image. Click 'Start' to shuffle and begin!</p>
+            <button id="start-btn">start</button>
+            <p id="pairs-found">pairs found</p>
+            <h2>0</h2>
+            
+        </section>
+
+        <section id="game-section">
+            <div class="cards">
+                <div class="card q0"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q1"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q2"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q3"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q4"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q5"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q6"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q7"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q8"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q9"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q10"><div class="cardfront"></div><div class="cardback"></div></div>
+                <div class="card q11"><div class="cardfront"></div><div class="cardback"></div></div>
+            </div>
+
+            <div id="overlay" class="hide">
+                <h1 id="gameOver">You're an XRay Pro!</h1>
+            </div>
+        </section>
+    </main>
+
+  <footer>
+       
+            <div>
+              
+                <p><a href="mailto:&#103;&#121;&#106;&#099;&#104;&#101;&#110;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email Me</a></p>
+                <p>©Grace Chen, 2026,</p>
+            </div>
+            <div>
+                <p> List of x-ray image <a href="citations.html" rel="citations">citations.</a>
+                </p>
+            </div>
+            
+    </footer>
+</body>
+</html>

@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: IBM Plex Sans;
+    background-color: var(--body-bg);
+    margin: 0;
+    max-width: 1000px;
+    margin: auto;
+}
+
+footer {
+    background-color: rgb(65, 65, 67);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    
+    
+    position: fixed; /* Fixes it to the viewport, not the body */
+    bottom: 0;       /* Pins it to the bottom */
+    left: 0;         /* Forces it to start at the browser's left edge */
+    right: 0;        /* Forces it to end at the browser's right edge */
+    width: 100%;     /* Ensures it spans the full horizontal width */
+    z-index: 100;    /* Ensures it stays above other elements */
+}
+
+:root{
+    --body-bg: #303030;
+    --bg-color: #8CD4B2;
+    --card-back: #000000;
+    --card-front: #5f28ce; 
+    --p-text: rgb(133, 133, 133);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 3em 2em 0em;
+}
+
+#text-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#game-section {
+    flex: 3;
+    max-width: 620px;
+    position: relative;
+}
+
+
+/* Typography */
+
+#game-logo{
+  width: 100%;
+  max-width: 300px;
+  
+}
+
+
+
+h2 {
+   font-size: 6em;
+   line-height: .6em;
+   color: #b2b2b2
+}
+
+#pairs-found{
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+.gamedata{
+    display: flex;
+    font-weight: 600;
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    font-size: 1.5em;
+}
+
+.gamedata h3{
+    font-family: 'Patua One', cursive;
+    padding: 0 1rem;
+}
+
+p{
+    font-size: 1.3em;
+    line-height: 1.5em;
+    color: #b2b2b2;
+}
+
+aside{
+    background-color: var(--bg-color);
+    width: 30vw;
+    height: 100vh;
+}
+
+aside a{
+    background-color: var(--btn-color);
+
+	display: inline-block;
+	cursor: pointer;
+    color: var(--p-text);
+	padding: 15px 30px;
+	text-decoration: none;
+    transition: 0.5s ease;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
+}
+
+aside a:hover{
+    background-color: var(--card-back);
+    transition: 0.5s ease;
+}
+
+.gameinfo{
+    padding: 3rem;
+}
+
+
+
+/* Cards */
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 620px;
+    gap: 2px;
+    justify-content: center;
+}
+
+.card{
+    width: calc(25% - 2px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    aspect-ratio: 1/1;
+
+}
+
+.cardfront, .cardback{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+.card img{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+.cardback{
+    background-color: var(--card-back);
+    backface-visibility: hidden;
+    height: 100%;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    width: 100%;
+    position: absolute;
+   
+}
+
+.cardback p {
+    color: white;
+    font-size: 2em
+}
+.cardfront{
+    background-color: var(--card-front);
+    transform: rotateY(0deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Footer */
+
+
+footer p {
+    font-size: 1em;
+}
+
+footer a{
+    text-align: left;
+    color: rgb(210, 210, 210);
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: none;
+    
+}
+
+footer a:hover{
+    opacity: 0.8;
+    color: #8b50ff;
+}
+
+/* Overlay styles */
+
+.hide{
+    opacity: 0;
+    transform: scale(0.2);
+    visibility: hidden;
+}
+
+#overlay {
+    background-color: #5b24c5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 888;
+
+    color: white;
+    font-size: 3em;
+    font-weight: 200;
+    
+    /* Center text perfectly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    /* Animation */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Ensure transform is added here */
+}
+
+#overlay h1 {
+    font-weight: 400;
+}
+
+button {
+    font-size: 3em;
+    
+    width: 100%;
+    font-weight: 600;
+    background-color: #b2b2b2;
+    color: white;
+    border-style: none;
+    text-transform: uppercase;
+
+}
+
+button:hover {
+    color: #8b50ff;
+    pointer-events: all;
+    
+}
+
+button:active {
+    transform: translateY(4px);
+    color: #5f28ce;
+    letter-spacing: 1px;
+    
+}
+
+#cheat-code {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #6e6e6e;
+    cursor: pointer;
+    z-index: 999;
+}
