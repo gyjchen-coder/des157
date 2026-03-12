@@ -8,7 +8,6 @@ body {
     font-size: 15px;
     font-family: IBM Plex Sans;
     background-color: var(--body-bg);
-    margin: 0;
     max-width: 1000px;
     margin: auto;
 }
@@ -18,14 +17,13 @@ footer {
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
-    
-    
-    position: fixed; /* Fixes it to the viewport, not the body */
-    bottom: 0;       /* Pins it to the bottom */
-    left: 0;         /* Forces it to start at the browser's left edge */
-    right: 0;        /* Forces it to end at the browser's right edge */
-    width: 100%;     /* Ensures it spans the full horizontal width */
-    z-index: 100;    /* Ensures it stays above other elements */
+
+    position: fixed; 
+    bottom: 0;       
+    left: 0;         
+    right: 0;        
+    width: 100%;     
+    z-index: 100;    
 }
 
 :root{
@@ -36,18 +34,22 @@ footer {
     --p-text: rgb(133, 133, 133);
 }
 
-main{
+#game-main{
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
     padding: 3em 2em 0em;
 }
 
+#citations {
+    max-width: 1000;
+}
+
 #text-section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .8rem;
 }
 
 #game-section {
@@ -57,8 +59,6 @@ main{
 }
 
 
-/* Typography */
-
 #game-logo{
   width: 100%;
   max-width: 300px;
@@ -67,62 +67,54 @@ main{
 
 
 
-h2 {
-   font-size: 6em;
-   line-height: .6em;
-   color: #b2b2b2
+#pair-text {
+   font-size: 1.4em;
+   color: #b2b2b2;
+   text-transform: uppercase;
+   margin-bottom: 0;
 }
 
-#pairs-found{
-    font-size: 1em;
-    text-transform: uppercase;
+#pair-num{
+    font-size: 6em;
+    color: #b2b2b2;
+    line-height: .8;
 
 }
-.gamedata{
-    display: flex;
-    font-weight: 600;
-    position: absolute;
-    top: 1%;
-    left: 10%;
-    font-size: 1.5em;
+
+.game-text {
+    font-size: 1.3em;
+    line-height: 1.6em;
+    color: #b2b2b2;
 }
 
-.gamedata h3{
-    font-family: 'Patua One', cursive;
-    padding: 0 1rem;
-}
 
 p{
-    font-size: 1.3em;
-    line-height: 1.5em;
+    font-size: 1em;
+    line-height: 1.6em;
     color: #b2b2b2;
+}
+
+h1 {
+    color:white;
+    line-height: 3em;
+}
+
+h2 {
+    color: white;
+    line-height: 1.8em;
+
+}
+
+a {
+    color: #d8d8d8;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 aside{
     background-color: var(--bg-color);
     width: 30vw;
     height: 100vh;
-}
-
-aside a{
-    background-color: var(--btn-color);
-
-	display: inline-block;
-	cursor: pointer;
-    color: var(--p-text);
-	padding: 15px 30px;
-	text-decoration: none;
-    transition: 0.5s ease;
-    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.5);
-}
-
-aside a:hover{
-    background-color: var(--card-back);
-    transition: 0.5s ease;
-}
-
-.gameinfo{
-    padding: 3rem;
 }
 
 
@@ -147,6 +139,7 @@ aside a:hover{
     transition: transform 0.6s;
     transform-style: preserve-3d;
     aspect-ratio: 1/1;
+    position: relative;
 
 }
 
@@ -165,14 +158,12 @@ aside a:hover{
 }
 
 .card img{
-    text-align: center;
     width: 100%;
     position: absolute;
 }
 
 .cardback{
     background-color: var(--card-back);
-    backface-visibility: hidden;
     height: 100%;
     transform: rotateY(180deg);
     backface-visibility: hidden;
@@ -183,7 +174,8 @@ aside a:hover{
 
 .cardback p {
     color: white;
-    font-size: 2em
+    font-size: 2em;
+    font-weight: 600;
 }
 .cardfront{
     background-color: var(--card-front);
@@ -193,8 +185,6 @@ aside a:hover{
     height: 100%;
     backface-visibility: hidden;
 }
-
-/* Footer */
 
 
 footer p {
@@ -210,12 +200,12 @@ footer a{
     
 }
 
-footer a:hover{
+a:hover{
     opacity: 0.8;
     color: #8b50ff;
 }
 
-/* Overlay styles */
+
 
 .hide{
     opacity: 0;
@@ -224,7 +214,7 @@ footer a:hover{
 }
 
 #overlay {
-    background-color: #5b24c5;
+    background-color: #ad28ef;
     position: absolute;
     top: 0;
     left: 0;
@@ -234,22 +224,20 @@ footer a:hover{
     z-index: 888;
 
     color: white;
-    font-size: 3em;
-    font-weight: 200;
+    font-size: 3.4em;
+    font-weight: 600;
     
-    /* Center text perfectly */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     text-transform: uppercase;
 
-    /* Animation */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Ensure transform is added here */
+    transition: opacity 0.5s ease, transform 0.5s ease; 
 }
 
-#overlay h1 {
-    font-weight: 400;
+#overlay p{
+    color: white;
 }
 
 button {
@@ -258,7 +246,7 @@ button {
     width: 100%;
     font-weight: 600;
     background-color: #b2b2b2;
-    color: white;
+    color: #7936ff;
     border-style: none;
     text-transform: uppercase;
 

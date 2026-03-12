@@ -14,14 +14,14 @@
 </head>
 
 <body>
-    <main>
+    <main id="game-main">
         <section id="text-section">
             <button id="cheat-code"></button>
             <img id="game-logo" src="images/game-logo.svg" alt="game-logo">
-            <p>Match the anatomical term with the correct X-ray image. Click 'Start' to shuffle and begin!</p>
+            <p class="game-text">Match the anatomical term with the correct X-ray image. Click 'Start' to shuffle and begin!</p>
             <button id="start-btn">start</button>
-            <p id="pairs-found">pairs found</p>
-            <h2>0</h2>
+            <p id="pair-text">pairs found</p>
+            <h2 id="pair-num">0</h2>
             
         </section>
 
@@ -41,8 +41,8 @@
                 <div class="card q11"><div class="cardfront"></div><div class="cardback"></div></div>
             </div>
 
-            <div id="overlay" class="hide">
-                <h1 id="gameOver">You're an XRay Pro!</h1>
+            <div id="overlay" class="hide" >
+                <p id="gameOver"></p>
             </div>
         </section>
     </main>
