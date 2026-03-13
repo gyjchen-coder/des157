@@ -34,11 +34,13 @@ footer {
     --p-text: rgb(133, 133, 133);
 }
 
+
 #game-main{
     display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    padding: 3em 2em 0em;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2em 2em 8em;
+
 }
 
 #citations {
@@ -65,7 +67,11 @@ footer {
   
 }
 
-
+#pair-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
 
 #pair-text {
    font-size: 1.4em;
@@ -77,8 +83,7 @@ footer {
 #pair-num{
     font-size: 6em;
     color: #b2b2b2;
-    line-height: .8;
-
+    line-height: 1em;
 }
 
 .game-text {
@@ -116,8 +121,6 @@ aside{
     width: 30vw;
     height: 100vh;
 }
-
-
 
 /* Cards */
 
@@ -265,7 +268,7 @@ button:active {
     
 }
 
-#cheat-code {
+/* #cheat-code {
     position: fixed;
     top: 0;
     left: 0;
@@ -274,4 +277,19 @@ button:active {
     background-color: #6e6e6e;
     cursor: pointer;
     z-index: 999;
+} */
+
+@media screen and (min-width: 600px) {
+
+#game-main{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+
+
+
+
+    
 }
