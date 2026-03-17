@@ -40,7 +40,6 @@ footer {
     flex-direction: column;
     gap: 1.5em;
     padding: 2em 2em 8em;
-
 }
 
 #citations {
@@ -63,8 +62,7 @@ footer {
 
 #game-logo{
   width: 100%;
-  max-width: 300px;
-  
+  max-width: 300px;  
 }
 
 #pair-container {
@@ -107,7 +105,6 @@ h1 {
 h2 {
     color: white;
     line-height: 1.8em;
-
 }
 
 a {
@@ -143,7 +140,6 @@ aside{
     transform-style: preserve-3d;
     aspect-ratio: 1/1;
     position: relative;
-
 }
 
 .cardfront, .cardback{
@@ -171,8 +167,7 @@ aside{
     transform: rotateY(180deg);
     backface-visibility: hidden;
     width: 100%;
-    position: absolute;
-   
+    position: absolute; 
 }
 
 .cardback p {
@@ -180,6 +175,7 @@ aside{
     font-size: 2em;
     font-weight: 600;
 }
+
 .cardfront{
     background-color: var(--card-front);
     transform: rotateY(0deg);
@@ -188,7 +184,6 @@ aside{
     height: 100%;
     backface-visibility: hidden;
 }
-
 
 footer p {
     font-size: 1em;
@@ -199,16 +194,13 @@ footer a{
     color: rgb(210, 210, 210);
     font-weight: 600;
     font-style: italic;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
 
 a:hover{
     opacity: 0.8;
     color: #8b50ff;
 }
-
-
 
 .hide{
     opacity: 0;
@@ -257,15 +249,13 @@ button {
 
 button:hover {
     color: #8b50ff;
-    pointer-events: all;
-    
+    pointer-events: all;   
 }
 
 button:active {
     transform: translateY(4px);
     color: #5f28ce;
-    letter-spacing: 1px;
-    
+    letter-spacing: 1px;  
 }
 
 /* #cheat-code {
